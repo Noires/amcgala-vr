@@ -1,0 +1,35 @@
+package org.amcgala.vr
+
+/**
+  * Startet die Simulation.
+  */
+object Main extends App {
+  val simulation = new Simulation(100, 100)
+
+  for (y ← 0 until simulation.height / 2) {
+    simulation.changeCellType(Position(simulation.width / 2, y), CellTypes.Forbidden)
+  }
+
+  simulation.spawnBot(classOf[TestAgent], Position(20, 20))
+  simulation.spawnBot(classOf[TestAgent], Position(10, 20))
+}
+
+class TestAgent extends Bot with Life, Hunger {
+  turnRight()
+  turnRight()
+
+  override def customBehaviour(): Unit = {
+    moveForward()
+    for {
+      vic ← vicinity(5)
+      n ← vic.headOption
+      h ← requestHeading(n._1)
+    } {
+      println(h)
+    }
+  }
+
+  def customReceive: TestAgent#Receive = {
+    case _ ⇒
+  }
+}

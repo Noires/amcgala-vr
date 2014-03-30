@@ -1,0 +1,125 @@
+package org.amcgala.vr
+
+import akka.actor.ActorRef
+import org.amcgala.vr.Headings.Heading
+import scala.concurrent.{ ExecutionContext, Future }
+import akka.pattern.ask
+import akka.util.Timeout
+
+object Bot {
+  case class PositionChange(pos: Position)
+  case object Introduction
+  case object RequestHeading
+}
+
+trait Bot extends Agent {
+
+  import concurrent.duration._
+  import Bot._
+
+  implicit val timeout = Timeout(1.second)
+  implicit val ec = ExecutionContext.global
+
+  var localPosition: Position = Position(0, 0)
+  var heading: Heading = Headings.Up
+  var velocity: Int = 1
+  var simulation: ActorRef = ActorRef.noSender
+
+  def receive: Receive = {
+    case Introduction ⇒
+      simulation = sender()
+    case PositionChange(pos) ⇒
+      localPosition = pos
+      context.become(positionHandling orElse tickHandling orElse customReceive)
+  }
+
+  def positionHandling: Receive = {
+    case PositionChange(pos) ⇒
+      localPosition = pos
+    case RequestHeading ⇒ sender() ! heading
+  }
+
+  def turnLeft(): Heading = {
+    heading match {
+      case Headings.Up        ⇒ heading = Headings.UpLeft
+      case Headings.UpLeft    ⇒ heading = Headings.Left
+      case Headings.Left      ⇒ heading = Headings.DownLeft
+      case Headings.DownLeft  ⇒ heading = Headings.Down
+      case Headings.Down      ⇒ heading = Headings.DownRight
+      case Headings.DownRight ⇒ heading = Headings.Right
+      case Headings.Right     ⇒ heading = Headings.UpRight
+      case Headings.UpRight   ⇒ heading = Headings.Up
+    }
+    heading
+  }
+
+  def turnRight(): Heading = {
+    heading match {
+      case Headings.Up        ⇒ heading = Headings.UpRight
+      case Headings.UpLeft    ⇒ heading = Headings.Up
+      case Headings.Left      ⇒ heading = Headings.UpLeft
+      case Headings.DownLeft  ⇒ heading = Headings.Left
+      case Headings.Down      ⇒ heading = Headings.DownLeft
+      case Headings.DownRight ⇒ heading = Headings.Down
+      case Headings.Right     ⇒ heading = Headings.DownRight
+      case Headings.UpRight   ⇒ heading = Headings.Right
+    }
+    heading
+  }
+  
+  def turnUntil(newHeading: Heading): Unit = heading = newHeading
+
+  def moveForward(): Unit = {
+    for (pos ← position()) {
+      simulation ! SimulationAgent.ChangePosition(Position(pos.x + heading.x * velocity, pos.y + heading.y * velocity))
+    }
+  }
+
+  def moveBackward(): Unit = {
+    for (pos ← position()) {
+      simulation ! SimulationAgent.ChangePosition(Position(pos.x - heading.x * velocity, pos.y - heading.y * velocity))
+    }
+  }
+
+  def position(): Future[Position] = (simulation ? SimulationAgent.PositionRequest(self)).mapTo[Position]
+
+  def vicinity(distance: Int): Future[Map[ActorRef, Position]] = (simulation ? SimulationAgent.VicinityRequest(self, distance)).mapTo[Map[ActorRef, Position]]
+
+  def requestHeading(ref: ActorRef): Future[Heading] = (ref ? Bot.RequestHeading).mapTo[Heading]
+  
+  def changeVelocity(change: Int): Unit = velocity += change
+
+  def customReceive: Receive
+}
+
+trait Hunger {
+  bot: Bot with Life ⇒
+
+  var hunger: Int = 0
+  var ticks: Int = 0
+
+  registerTick(() ⇒ {
+    ticks = (ticks + 1) % 20
+
+    if (ticks == 0) {
+      hunger += 1
+    }
+    
+    if(hunger > 100 && ticks == 0){
+      life -= 1
+    }
+  })
+}
+
+trait Life {
+  bot: Bot =>
+  
+  var life: Int = 100
+  
+  registerTick(() ⇒ {
+    if(life < 0){
+      self ! PoisonPill
+    } 
+  })
+}
+

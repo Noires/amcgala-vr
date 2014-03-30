@@ -1,0 +1,122 @@
+format version: 1
+products:
+15 items
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$formatSettings$1.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$formatSettings$2.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$1.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$2.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$3.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$4.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$5.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$6.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$7.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$1.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$2.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$3.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$4.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$.class
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR.class
+binary dependencies:
+9 items
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/org.scala-sbt/apply-macro/jars/apply-macro-0.13.1.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/org.scala-sbt/collections/jars/collections-0.13.1.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/org.scala-sbt/main-settings/jars/main-settings-0.13.1.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/org.scala-sbt/main/jars/main-0.13.1.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.1.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/org.scalariform/scalariform_2.10/jars/scalariform_2.10-0.1.4.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.ivy2/cache/scala_2.10/sbt_0.13/com.typesafe.sbt/sbt-scalariform/jars/sbt-scalariform-1.2.0.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /home/rgiacinto/.sbt/boot/scala-2.10.3/lib/scala-library.jar
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> /usr/lib/jvm/java-7-openjdk/jre/lib/rt.jar
+source dependencies:
+0 items
+external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+class names:
+15 items
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$formatSettings$1
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$formatSettings$2
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$1
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$2
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$3
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$4
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$5
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$6
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$projectSettings$7
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$root$1
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$root$2
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$root$3
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> VR$$anonfun$root$4
+product stamps:
+15 items
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$formatSettings$1.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$formatSettings$2.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$1.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$2.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$3.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$4.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$5.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$6.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$projectSettings$7.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$1.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$2.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$3.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$$anonfun$root$4.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR$.class -> lastModified(1396212167000)
+/run/media/rgiacinto/PhD/Projects/VR/project/target/scala-2.10/sbt-0.13/classes/VR.class -> lastModified(1396212167000)
+source stamps:
+1 items
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> hash(9ddda6e62a9917228c46414b1b39ad2722a9ca35)
+binary stamps:
+9 items
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/apply-macro/jars/apply-macro-0.13.1.jar -> lastModified(1386688489000)
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/collections/jars/collections-0.13.1.jar -> lastModified(1386688482000)
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/main-settings/jars/main-settings-0.13.1.jar -> lastModified(1386688538000)
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/main/jars/main-0.13.1.jar -> lastModified(1386688549000)
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.1.jar -> lastModified(1386688545000)
+/home/rgiacinto/.ivy2/cache/org.scalariform/scalariform_2.10/jars/scalariform_2.10-0.1.4.jar -> lastModified(1366828548000)
+/home/rgiacinto/.ivy2/cache/scala_2.10/sbt_0.13/com.typesafe.sbt/sbt-scalariform/jars/sbt-scalariform-1.2.0.jar -> lastModified(1378050200000)
+/home/rgiacinto/.sbt/boot/scala-2.10.3/lib/scala-library.jar -> lastModified(1380275091000)
+/usr/lib/jvm/java-7-openjdk/jre/lib/rt.jar -> lastModified(1396016905000)
+class names:
+9 items
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/apply-macro/jars/apply-macro-0.13.1.jar -> sbt.appmacro.Instance$
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/collections/jars/collections-0.13.1.jar -> sbt.LinePosition$
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/main-settings/jars/main-settings-0.13.1.jar -> sbt.std.FullInstance$
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/main/jars/main-0.13.1.jar -> sbt.Build
+/home/rgiacinto/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.1.jar -> sbt.package$
+/home/rgiacinto/.ivy2/cache/org.scalariform/scalariform_2.10/jars/scalariform_2.10-0.1.4.jar -> scalariform.formatter.preferences.DoubleIndentClassDeclaration$
+/home/rgiacinto/.ivy2/cache/scala_2.10/sbt_0.13/com.typesafe.sbt/sbt-scalariform/jars/sbt-scalariform-1.2.0.jar -> com.typesafe.sbt.SbtScalariform$
+/home/rgiacinto/.sbt/boot/scala-2.10.3/lib/scala-library.jar -> scala.collection.TraversableLike
+/usr/lib/jvm/java-7-openjdk/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+1 items
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSIdu0j8FrMwCAAVJAAdhcGlIYXNoWgAIaGFzTWFjcm9MAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBx6DrEAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AA54cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAACVlJ1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHABc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHBzcQB+ACcBc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AA5MAAlpbmhlcml0ZWRxAH4ADkwAB3BhcmVudHNxAH4ADnhxAH4ALnNxAH4AJwF1cQB+AAkAAAAAcHNxAH4AJwF1cQB+AAkAAAAAcHNxAH4AJwF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAA3NyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4AFUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AC10AAVCdWlsZHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4ALXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+ABV4cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAADc2J0c3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AEdzcQB+ADp0AAZPYmplY3RzcQB+AD5zcQB+AEF1cQB+AEQAAAADc3EAfgBGdAAEamF2YXNxAH4ARnQABGxhbmdxAH4AS3NxAH4AOnQAA0FueXNxAH4APnNxAH4AQXVxAH4ARAAAAAJzcQB+AEZ0AAVzY2FsYXEAfgBLcHB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABRRS67EJ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+ABVMAA9zb3VyY2VEaXJlY3RvcnlxAH4AFXhwdABPL3J1bi9tZWRpYS9yZ2lhY2ludG8vUGhEL1Byb2plY3RzL1ZSL3Byb2plY3QvdGFyZ2V0L3NjYWxhLTIuMTAvc2J0LTAuMTMvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFJ3dpuYqmRcijEZBSxs5rSciqco1
+external apis:
+0 items
+source infos:
+1 items
+/run/media/rgiacinto/PhD/Projects/VR/project/Build.scala -> 
+AAAAAAAAAAA=
+compilations:
+5 items
+000 -> 
+rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABRNaw6md1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARi9ydW4vbWVkaWEvcmdpYWNpbnRvL1BoRC9WUi9wcm9qZWN0L3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEv
+001 -> 
+rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABRNqZpTF1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATy9ydW4vbWVkaWEvcmdpYWNpbnRvL1BoRC9Qcm9qZWN0cy9WUi9wcm9qZWN0L3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEv
+002 -> 
+rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABRO+LGNZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATy9ydW4vbWVkaWEvcmdpYWNpbnRvL1BoRC9Qcm9qZWN0cy9WUi9wcm9qZWN0L3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEv
+003 -> 
+rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABRRS6fqJ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATy9ydW4vbWVkaWEvcmdpYWNpbnRvL1BoRC9Qcm9qZWN0cy9WUi9wcm9qZWN0L3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEv
+004 -> 
+rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABRRS67EJ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATy9ydW4vbWVkaWEvcmdpYWNpbnRvL1BoRC9Qcm9qZWN0cy9WUi9wcm9qZWN0L3RhcmdldC9zY2FsYS0yLjEwL3NidC0wLjEzL2NsYXNzZXN0AAEv
+compile setup:
+1 items
+1 -> 
+AABPL3J1bi9tZWRpYS9yZ2lhY2ludG8vUGhEL1Byb2plY3RzL1ZSL3Byb2plY3QvdGFyZ2V0L3NjYWxhLTIuMTAvc2J0LTAuMTMvY2xhc3NlcwAAAAAAAAAAAAYyLjEwLjMAAAAA
