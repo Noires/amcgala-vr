@@ -1,0 +1,99 @@
+    Beispiel: Suche andere Person und infiziere sie
+
+    Mögliche Tasks:
+        1. Finde nächsten nichtinfizierten Agenten.
+            Input: Simulation, Koordinate
+            Output: Ref des Agenten
+        2. Gehe zu nichtinfizierten Agenten
+            Input: Ref des Agenten
+            Output: Cell
+            Side Effect: Agent hat neue Position
+        3. Infiziere Agenten
+            Input: Ref des Agenten
+            Side Effect: Agent infiziert
+
+    Implementierende Klasse: InfectPeopleBehaviour
+    
+
+    class InfectPeopleBehaviour(bot: Bot with JobModule) extends Behavior {
+        def start(): Future[Result] = {
+              for{
+		  agent <- bot.brain.executeTask(JobService.findJobRepresentative(bot, Job.Unemployed))
+                  cell <- bot.brain.executeTask(MovementService.moveTo(bot, agent.coords))
+                  result <- bot.brain.executeTask(InfectionService.infectAgent(agent))
+              } yield result
+        }
+    }
+
+    class FindJobRepresentativeTask(bot: Bot with JobModule, job: Job) extends Task[Unemployed] {
+         def execute(): Future[Unemployed] = {
+           bot.findRepresentative(job)
+         }
+    }
+
+    class InfectAgent(agent: Bot) extends Task[Result] {
+        def execute(): Future[Result] = {
+            agent.getInfected()
+            Result.Success
+        }
+    }
+
+    object InfectionService{
+        def infectAgent(agent: Bot): infectAgentTask = new infectAgentTask(bot)
+    }
+
+    Beispiel: Gehe zum Arzt und heile dich
+
+    Mögliche Tasks:
+        1. Finde Arztpraxis.
+            Input: Ziel (Ort, Typ)
+            Output: Koordinate
+        2. Gehe zu Ort
+            Input: Koordinate
+            Output: Cell
+            Side Effect: Agent hat neue Position
+        3. Finde Arzt
+            Input: Simulation
+            Output: Ref des Arztes
+        4. Gehe in Behandlung
+            Input: Ref des Arztes
+            Output: Done
+	    Side Effect: Geheilt.
+
+    Implementierende Klasse: FindCureBehavior 
+
+
+    class FindCureBehavior(bot: Bot with JobModule) extends Behavior {
+        def start(): Future[Result] = {
+              for{
+                  coord <- bot.brain.executeTask(LocationService.find(Building.Krankenhaus))
+                  cell <- bot.brain.executeTask(MovementService.moveTo(bot, coord))
+                  doctor <- bot.brain.executeTask(JobService.findJobRepresentative(bot, Job.Doctor))
+                  result <- bot.brain.executeTask(CureService.takeTreatment(bot, doctor))
+              } yield result
+        }
+    }   
+
+    class FindJobRepresentativeTask(bot: Bot with JobModule, job: Job) extends Task[Doctor] {
+         def execute(): Future[Doctor] = {
+           bot.findRepresentative(job)
+         }
+    }
+
+    object JobService {
+        def findJobRepresentative(bot: Bot with JobModule, job: Job): FindJobRepresentativeTask = {
+            new FindJobRepresentative(bot, job)
+        }
+    }
+
+    class TakeTreatmentTask(bot: Bot, doc: Doctor) extends Task[Result] {
+        def execute(): Future[Result] = {
+            doc.heal(bot)
+            Result.Success
+        }
+    }
+
+    object CureService {
+        def orderFries(waiter: JobRepresentative[Waiter], amount: Int): OrderFriesTask = new OrderFriesTask(waiter, amount)
+        def takeTreatment(bot: Bot, doc:Doctor): TakeTreatmentTask = new TakeTreatmentTask(bot,doc)
+    }
