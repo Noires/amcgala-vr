@@ -1,6 +1,6 @@
 package org.amcgala.vr.infection
 
-import org.amcgala.vr.{Task, Position, MultiStepTask, Bot}
+import org.amcgala.vr.{Task, MultiStepTask, Bot}
 import org.amcgala.vr._
 import akka.actor.ActorRef
 import org.amcgala.agent.Simulation
@@ -10,7 +10,9 @@ import scala.concurrent.Future
 
 object CureService {
 
-  class getCuredTask(implicit val bot: Bot, doctor: Bot) extends Task {
+  class getCuredTask(implicit val bot: Bot) extends Task {
+    import scala.concurrent.ExecutionContext.Implicits.global
+
     type Return = Boolean
     import scala.concurrent._
 
@@ -22,5 +24,5 @@ object CureService {
 
   }
 
-  def getCured(implicit bot: Bot, doctor:Bot) = new getCuredTask()
+  def getCured(implicit bot: Bot) = new getCuredTask()
 }

@@ -16,17 +16,15 @@ class FindNextBotToInfectTask(implicit val bot: Bot) extends MultiStepTask {
   override def onTick(): Unit = {
     // Anderer Bot im Suchbereich.
     for(v <- bot.vicinity(20)){
-      if(v.nonEmpty){
-        bot.moveToPosition(v.last._2)
+      if(v.bots.nonEmpty){
+        bot.moveToPosition(v.bots.last._2)
         // Anderer Bot in unmittelbarer Umgebung.
         for (i <- bot.vicinity(1))
         {
-          if (i.nonEmpty){
+          if (i.bots.nonEmpty){
             // TODO: Möglichkeit um bei ActorRef-Bedürfniss zu registrieren.
-            if (i.last._1.isInstanceOf[Bot]){
-              i.last._1.asInstanceOf[Bot].registerNeed(Infection.apply())
+              Bot(i.bots.last._1).registerNeed(Infection.apply())
               done()
-            }
           }
         }
       }else {

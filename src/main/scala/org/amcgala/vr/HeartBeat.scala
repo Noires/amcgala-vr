@@ -12,7 +12,7 @@ object HeartBeat {
 }
 
 /**
-  * Publishes the [[HeartBeat.Tick]] messages to the [[akka.event.EventStream]] of the [[akka.actor.ActorSystem]].
+  * Publishes the [[org.amcgala.vr.HeartBeat.Tick]] messages to the [[akka.event.EventStream]] of the [[akka.actor.ActorSystem]].
   */
 class HeartBeat extends Actor {
 
@@ -28,7 +28,6 @@ class HeartBeat extends Actor {
     case Ping ⇒
       minutes = (minutes + 5) % 60
       hours = if (minutes == 0) (hours + 1) % 24 else hours
-      // println(s"$hours::$minutes")
       context.system.eventStream.publish(Tick(Time(hours, minutes)))
   }
 }

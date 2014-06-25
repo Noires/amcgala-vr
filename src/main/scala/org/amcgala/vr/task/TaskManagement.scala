@@ -66,7 +66,7 @@ class Brain(bot: Bot) {
   private var activeBehavior: Option[Behavior] = None
   private var activeTask: Option[Task] = None
 
-  private var mode: BrainMode = BrainModes.IdleMode
+  private var mode: BrainMode = BrainModes.JobMode
 
   private val needManager = new NeedManager
 

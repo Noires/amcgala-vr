@@ -1,14 +1,14 @@
 package org.amcgala.vr.infection
 
-import org.amcgala.vr.{Behavior, Position, BotAgent, Bot}
+import org.amcgala.vr._
 import org.amcgala.vr.need.{ Need, SatisfactionBehavior }
 import example.LocationService
 import org.amcgala.vr.building.BuildingType.Restaurant
 import org.amcgala.vr.need.Needs.Hunger
 import akka.actor.ActorRef
-import example.LocationService.Coordinate
 import scala.util.Random
 import scala.concurrent.Future
+import org.amcgala.vr.Bot
 
 class InfectionBehavior()(implicit val bot: Bot) extends Behavior {
 
