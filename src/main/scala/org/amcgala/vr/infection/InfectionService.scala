@@ -21,13 +21,11 @@ class FindNextBotToInfectTask(implicit val bot: Bot) extends MultiStepTask {
         // Anderer Bot in unmittelbarer Umgebung.
         for (i <- bot.vicinity(1))
         {
+          // Infection hinzufügen
           if (i.nonEmpty){
-            // TODO: Möglichkeit um bei ActorRef-Bedürfniss zu registrieren.
-            if (i.last._1.isInstanceOf[Bot]){
-              i.last._1.asInstanceOf[Bot].registerNeed(Infection.apply())
+              Bot(i.last._1).registerNeed(Infection.apply())
               done()
             }
-          }
         }
       }else {
         // Wait
