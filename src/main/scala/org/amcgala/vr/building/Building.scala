@@ -37,8 +37,8 @@ trait Building extends Agent with Stash {
   }
 
   def common: Receive = {
-    case RegisterOwner(o) ⇒ owner = Some(o)
-    case ChangeOrientation(o) => orientation = o
+    case RegisterOwner(o)     ⇒ owner = Some(o)
+    case ChangeOrientation(o) ⇒ orientation = o
   }
 
   def taskHandling: Receive
@@ -50,5 +50,5 @@ sealed trait BuildingType
 object BuildingType {
 
   case object Restaurant extends BuildingType
-
+  case object Hospital extends BuildingType
 }

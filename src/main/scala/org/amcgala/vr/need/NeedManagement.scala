@@ -1,7 +1,7 @@
 package org.amcgala.vr.need
 
 import org.amcgala.vr.Behavior
-import org.amcgala.vr.need.Needs.NeedIDs.{HungerID, NeedID}
+import org.amcgala.vr.need.Needs.NeedIDs.{ HungerID, NeedID }
 
 trait SatisfactionBehavior extends Behavior {
   val need: Need
@@ -33,26 +33,65 @@ object Needs {
   object NeedIDs {
     sealed trait NeedID
     case object HungerID extends NeedID
+    case object InfectionID extends NeedID
   }
 
-  class Hunger extends Need {
-    val id = HungerID
-    def addSatisfactionBehavior(behavior: SatisfactionBehavior): Unit = ???
+  class Hunger extends Need
+  {
 
-    def satisfactionBehaviors: List[SatisfactionBehavior] = ???
+    val id = NeedIDs.HungerID
 
-    def decrease(): Double = ???
+    var manager: Option[NeedManager] = None
 
-    def decrease(delta: Double): Double = ???
+    var value: Double = 100
 
-    def increase(): Double = ???
+    var behaviors: List[SatisfactionBehavior] = List.empty[SatisfactionBehavior]
 
-    def increase(delta: Double): Double = ???
+    def addSatisfactionBehavior(behavior: SatisfactionBehavior): Unit =
+    {
+      behaviors = behavior :: behaviors
+    }
 
-    def update(): Unit = ???
+    def satisfactionBehaviors: List[SatisfactionBehavior] =
+    {
+      return behaviors
+    }
 
-    var value: Double = 0.0
+    def decrease(): Double =
+    {
+      value -= 0.10
+
+      return value
+    }
+
+    def decrease(delta: Double): Double =
+    {
+      value -= delta
+
+      return value
+    }
+
+    def increase(): Double =
+    {
+      value += 0.10
+
+      return value
+    }
+
+    def increase(delta: Double): Double =
+    {
+      value += delta
+
+      return value
+    }
+
+    def update(): Unit =
+    {
+      this.decrease()
+    }
   }
+
+
 
   object Hunger {
     def apply(): Hunger = new Hunger()

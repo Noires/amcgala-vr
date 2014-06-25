@@ -110,9 +110,9 @@ trait BotAgent extends Agent with Stash {
       for (r ← brain.executeTask(t)) {
         requester ! r
       }
-    case RequestVicinity(distance) =>
+    case RequestVicinity(distance) ⇒
       val requester = sender()
-      for(v <- vicinity(distance)) requester ! v
+      for (v ← vicinity(distance)) requester ! v
     case TimeRequest ⇒
       sender() ! currentTime
   }
@@ -125,15 +125,15 @@ trait BotAgent extends Agent with Stash {
   protected def positionHandling: Receive = {
     case PositionChange(pos) ⇒
       localPosition = pos
-    case HeadingRequest         ⇒ sender() ! heading
-    case TurnLeft               ⇒
+    case HeadingRequest ⇒ sender() ! heading
+    case TurnLeft ⇒
       turnLeft()
-    case TurnRight              ⇒
+    case TurnRight ⇒
       turnRight()
-    case MoveBackward           ⇒  moveBackward()
-    case MoveForward            ⇒  moveForward()
-    case MoveToPosition(pos)    ⇒  moveToPosition(pos)
-    case ChangeVelocity(vel)    ⇒  velocity = vel
+    case MoveBackward           ⇒ moveBackward()
+    case MoveForward            ⇒ moveForward()
+    case MoveToPosition(pos)    ⇒ moveToPosition(pos)
+    case ChangeVelocity(vel)    ⇒ velocity = vel
     case CurrentPositionRequest ⇒ sender() ! localPosition
   }
 

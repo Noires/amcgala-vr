@@ -5,6 +5,8 @@ import org.amcgala.vr._
 import org.amcgala.vr.Position
 import example.LocationService.Coordinate
 import org.amcgala.vr.building.BuildingType
+import akka.actor.ActorRef
+import scala.concurrent.Future
 
 object BresenhamIterator {
 
