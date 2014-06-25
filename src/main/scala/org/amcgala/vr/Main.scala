@@ -1,34 +1,64 @@
 package org.amcgala.vr
 
+import akka.actor.Actor.Receive
 import scala.util.Random
 import example.{ BresenhamIterator, LocationService }
-import example.LocationService.Coordinate
 import scala.concurrent.Future
-import org.amcgala.vr.building.TownHall
 import org.amcgala.vr.building.BuildingType.Restaurant
-import org.amcgala.CellType
 import org.amcgala.vr.need.{Need, SatisfactionBehavior}
 import org.amcgala.vr.need.Needs.Hunger
+import org.amcgala.vr.task.BobBuilder
+import org.amcgala.vr.BdB.BuildRoad
 
 /**
-  * Startet die Simulation.
-  */
+ * Startet die Simulation.
+ */
 object Main extends App {
   val simulation = new Simulation(200, 200)
 
-  for (i ← 0 until 15) {
-    simulation.spawnBot(classOf[SimpleNPC], Position(Random.nextInt(simulation.width), Random.nextInt(simulation.height)))
+  for (i ← 0 until 1) {
+    simulation.spawnBot(classOf[SimpleNPC], Coordinate(70,100))
+    simulation.spawnBot(classOf[tempNPC], Coordinate(100, 40))
   }
 
-  simulation.spawnBuilding(classOf[TownHall], Position(100, 100))
-  for (x ← 50 until 150) {
-    simulation.changeCellType(Position(x, 98), CellType.Road)
-  }
+
+  //BuildRoad.buildRoad(Coordinate(43, 69), Coordinate(52, 78))
+  BuildRoad.buildInfrastructure(Coordinate(1,1), 8)
 }
 
 class SimpleNPC extends BotAgent {
-  brain.registerJob(new JobBehavior())
+  brain.registerJob(new BobBuilder())
   brain.registerIdleBehavior(new RandomWalkBehavior())
+}
+
+class tempNPC extends BotAgent {
+  brain.registerJob(new GoAndGet())
+  brain registerIdleBehavior(new RandomWalkBehavior())
+
+  override var customReceive: Receive = {
+    case BuildingService.JobDone(coordinate) =>
+      println("Bot alerted")
+
+  }
+}
+
+class GoAndGet() (implicit val bot: Bot) extends Behavior {
+
+  import scala.concurrent.ExecutionContext.Implicits.global
+
+  override type Return = Unit.type
+
+  override def start(): Future[Return] = {
+    for {
+      loc <- bot.townHall
+      q <- bot.executeTask(LocationService.walkTo(Coordinate(loc.x, loc.y-1)))
+      diner <- bot.executeTask(BuildingService.requestBuilding("diner", this.bot))
+      house <- bot.executeTask(BuildingService.requestBuilding("livingQuarter", this.bot))
+      hospital <- bot.executeTask(BuildingService.requestBuilding("hospital", this.bot))
+    } yield {
+      Unit
+    }
+  }
 }
 
 class RandomWalkBehavior()(implicit val bot: Bot) extends Behavior {
@@ -50,7 +80,7 @@ class JobBehavior()(implicit val bot: Bot) extends SatisfactionBehavior {
 
   import scala.concurrent.ExecutionContext.Implicits.global
 
-  type Return = LocationService.Cell
+  type Return = Cell
 
 
   def start() = {
