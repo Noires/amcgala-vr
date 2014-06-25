@@ -8,7 +8,7 @@ import org.amcgala.vr.building.BuildingType.Restaurant
 import org.amcgala.vr.need.{Need, SatisfactionBehavior}
 import org.amcgala.vr.need.Needs.Hunger
 import org.amcgala.vr.task.BobBuilder
-import org.amcgala.vr.BdB.BuildRoad
+import org.amcgala.vr.BuildingServicePackage.{BuildingService, BuildRoad}
 
 /**
  * Startet die Simulation.

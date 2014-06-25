@@ -1,8 +1,9 @@
 package org.amcgala.vr.building
 
 import akka.actor.{ActorLogging, Props, ActorRef}
-import org.amcgala.vr.BuildingService.JobDone
-import org.amcgala.vr.{Bot, BuildingService}
+import org.amcgala.vr.BuildingServicePackage.BuildingService
+import BuildingService.JobDone
+import org.amcgala.vr.Bot
 
 object TownHall {
 

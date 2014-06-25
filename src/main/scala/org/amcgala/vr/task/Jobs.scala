@@ -1,7 +1,8 @@
 package org.amcgala.vr.task
 
 import example.LocationService
-import org.amcgala.vr.{Coordinate, BuildingService, Bot, Behavior}
+import org.amcgala.vr.BuildingServicePackage.BuildingService
+import org.amcgala.vr.{Coordinate, Bot, Behavior}
 import scala.concurrent.Future
 
 class SicknessSpreader(val bot: Bot) extends Behavior {
