@@ -21,12 +21,8 @@ class InfectionBehavior()(implicit val bot: Bot) extends Behavior {
   def start() = {
     for {
       map ← bot.executeTask(InfectionService.findNextBotToInfect(bot))
-     // ho <- map.head
-     // pos = new LocationService.Coordinate(map.head._2.x, map.head._2.y)
-     // mcd ← bot.executeTask(LocationService.walkTo(pos)(bot))
     } yield {
       done = true
-      //need.decrease(49)
       map
     }
 
