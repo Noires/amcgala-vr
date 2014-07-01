@@ -21,8 +21,8 @@ class CureBehavior()(implicit val bot: Bot) extends SatisfactionBehavior{
       for{
         cord <- bot.executeTask(LocationService.findLocation(BuildingType.Hospital))
         cell <- bot.executeTask(LocationService.walkTo(cord))
-        //doctor <- bot.executeTask((bot, Job.Doctor))
-        result <- bot.executeTask(CureService.getCured(bot, bot))
+        //doctor <- bot.executeTask(LocationService.findBotwithJob(bot, Job.Doctor))
+        result <- bot.executeTask(CureService.getCured(bot, doctor))
       } yield result
     }
 
