@@ -17,6 +17,7 @@ object CureService {
     def isDone() = true
 
     def execute(): Future[Return] = {
+      bot.removeNeed(Infection.ID)
       future{true}
     }
 
