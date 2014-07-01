@@ -16,8 +16,6 @@ class InfectionBehavior()(implicit val bot: Bot) extends Behavior {
 
   type Return = Boolean
 
-  private val target = Coordinate(Random.nextInt(200), Random.nextInt(200))
-
   def start() = {
     for {
       map ← bot.executeTask(InfectionService.findNextBotToInfect(bot))
